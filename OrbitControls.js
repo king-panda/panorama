@@ -19,7 +19,7 @@
 
 		// Limits to how far you can dolly in and out ( PerspectiveCamera only )
 		this.minDistance = 0;
-		this.maxDistance = Infinity;
+		this.maxDistance = 10;
 
 		// Limits to how far you can zoom in and out ( OrthographicCamera only )
 		this.minZoom = 0;
@@ -342,7 +342,7 @@
 		// backwards compatibility.
 		// Set to false to disable zooming
 		this.enableZoom = true;
-		this.zoomSpeed = 0.7;
+		this.zoomSpeed = 1.0;
 
 		// Set to false to disable rotating
 		this.enableRotate = true;

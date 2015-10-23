@@ -18,7 +18,7 @@
   <script src="OrbitControls.js"></script>
   <script src="main.js"></script>
 
-  
+
 
 
   <script>
@@ -72,11 +72,22 @@
   function render(){
 
     requestAnimationFrame(render);
-    sphere.rotation.y += 0.1 * Math.PI/180;
+    sphere.rotation.y += 0.05 * Math.PI/180;
+    window.addEventListener( 'resize', onWindowResize, false );
     renderer.render(scene,camera);
     controls.update();
   }
   render();
+
+  function onWindowResize() {
+
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+
+		renderer.setSize( window.innerWidth, window.innerHeight );
+
+	}
+
 
 })();
 
